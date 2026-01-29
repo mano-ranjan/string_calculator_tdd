@@ -4,6 +4,14 @@ class StringCalculator {
       return 0;
     }
 
-    return int.parse(numberList);
+    final List<String> splittedParts = numberList.split(',');
+
+    int sum = 0;
+
+    for (String part in splittedParts) {
+      sum += int.parse(part);
+    }
+
+    return sum;
   }
 }
