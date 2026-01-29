@@ -10,4 +10,9 @@ void main() {
     final StringCalculator calculator = StringCalculator();
     expect(calculator.add(''), 0);
   });
+
+  test('single number returns its value', () {
+    final StringCalculator calculator = StringCalculator();
+    expect(calculator.add('1'), 1);
+  });
 }
