@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:string_calculator_tdd/string_calculator.dart';
 
@@ -34,5 +36,21 @@ void main() {
   test('custom delimiter is supported', () {
     final StringCalculator calculator = StringCalculator();
     expect(calculator.add('//;\n1;2'), 3);
+  });
+
+  test('negative numbers throw exception with all values', () {
+    final calculator = StringCalculator();
+
+    expect(
+      () => calculator.add('1,-2,-3'),
+      throwsA(
+        predicate(
+          (e) =>
+              e is Exception &&
+              e.toString().contains('-2') &&
+              e.toString().contains('-3'),
+        ),
+      ),
+    );
   });
 }
