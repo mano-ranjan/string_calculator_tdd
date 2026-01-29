@@ -13,9 +13,22 @@ class StringCalculator {
 
     final List<String> splittedParts = numberList.split(delimiter);
     int sum = 0;
+    final List<int> negativeNumberList = [];
 
     for (String part in splittedParts) {
-      sum += int.parse(part);
+      int parsedValue = int.parse(part);
+
+      if (parsedValue < 0) {
+        negativeNumberList.add(parsedValue);
+      }
+
+      sum += parsedValue;
+    }
+
+    if (negativeNumberList.isNotEmpty) {
+      throw Exception(
+        'negative numbers not allowed ${negativeNumberList.join(',')}',
+      );
     }
 
     return sum;
