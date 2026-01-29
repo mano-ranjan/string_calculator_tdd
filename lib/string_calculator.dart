@@ -4,8 +4,7 @@ class StringCalculator {
       return 0;
     }
 
-    final List<String> splittedParts = numberList.split(',');
-
+    final List<String> splittedParts = numberList.split(RegExp('[,\n]'));
     int sum = 0;
 
     for (String part in splittedParts) {
