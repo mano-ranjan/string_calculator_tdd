@@ -1,9 +1,9 @@
 class StringCalculator {
-  int add(String number) {
-    if (number.isEmpty) {
+  int add(String numberList) {
+    if (numberList.isEmpty) {
       return 0;
     }
 
-    return int.parse(number);
+    return int.parse(numberList);
   }
 }
