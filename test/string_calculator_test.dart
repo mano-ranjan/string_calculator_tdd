@@ -44,11 +44,10 @@ void main() {
     expect(
       () => calculator.add('1,-2,-3'),
       throwsA(
-        predicate(
-          (e) =>
-              e is Exception &&
-              e.toString().contains('-2') &&
-              e.toString().contains('-3'),
+        isA<Exception>().having(
+          (e) => e.toString(),
+          'message',
+          allOf(contains('-2'), contains('-3')),
         ),
       ),
     );
