@@ -5,4 +5,9 @@ void main() {
   test('initialize StringCalculator class', () {
     final StringCalculator calculator = StringCalculator();
   });
+
+  test('return 0 if empty string', () {
+    final StringCalculator calculator = StringCalculator();
+    expect(calculator.add(''), 0);
+  });
 }
