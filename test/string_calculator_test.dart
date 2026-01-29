@@ -15,4 +15,9 @@ void main() {
     final StringCalculator calculator = StringCalculator();
     expect(calculator.add('1'), 1);
   });
+
+  test('two comma separated numbers are added', () {
+    final StringCalculator calculator = StringCalculator();
+    expect(calculator.add('1,2'), 3);
+  });
 }
