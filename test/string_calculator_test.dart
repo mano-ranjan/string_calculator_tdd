@@ -30,4 +30,9 @@ void main() {
     final StringCalculator calculator = StringCalculator();
     expect(calculator.add('1\n2,3,4'), 10);
   });
+
+  test('custom delimiter is supported', () {
+    final StringCalculator calculator = StringCalculator();
+    expect(calculator.add('//;\n1;2'), 3);
+  });
 }
