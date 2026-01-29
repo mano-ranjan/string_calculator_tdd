@@ -1,16 +1,20 @@
-# string_calculator_tdd
+# String Calculator – TDD Kata (Flutter / Dart)
 
-A new Flutter project.
+## Overview
+This project implements the **String Calculator TDD Kata** using **Flutter (Dart)**, developed strictly following **Test-Driven Development (TDD)** principles.
 
-## Getting Started
+The goal of this exercise is to demonstrate **software craftsmanship**, focusing on:
+- behavior-driven design
+- test-first development
+- clean, refactorable code
+- disciplined Git history
 
-This project is a starting point for a Flutter application.
+No UI is included. The solution is implemented as pure business logic and validated entirely through unit tests.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Problem Description
+Implement a `StringCalculator` with the following method:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+int add(String numbers)
