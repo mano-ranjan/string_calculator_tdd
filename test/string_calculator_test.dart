@@ -25,4 +25,9 @@ void main() {
     final StringCalculator calculator = StringCalculator();
     expect(calculator.add('1,2,3,4'), 10);
   });
+
+  test('new lines are valid delimiters', () {
+    final StringCalculator calculator = StringCalculator();
+    expect(calculator.add('1\n2,3,4'), 10);
+  });
 }
